@@ -1,0 +1,9 @@
+{
+  "name": "calendar",
+  "packageManager": "yarn@3.1.0",
+  "devDependencies": {
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
