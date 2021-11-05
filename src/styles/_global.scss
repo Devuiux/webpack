@@ -1,0 +1,12 @@
+@use "variables";
+
+body {
+  background-color: var(--var-bg);
+  color: var(--var-color);
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
