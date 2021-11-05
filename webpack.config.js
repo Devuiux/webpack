@@ -3,6 +3,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
+const plugins = [
+  new CleanWebpackPlugin(),
+  new MiniCssExtractPlugin(),
+  new HtmlWebpackPlugin({
+    template: "./src/index.html",
+  }),
+];
+
 const mode = (process.env.NODE_ENV === "production")? "production" : "development";
 
 // let mode = "development";
@@ -47,13 +55,10 @@ module.exports = {
     ]
   },
 
-  plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    })
-  ],
+  plugins: plugins,
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
 
   devtool: "source-map",
   devServer: {
